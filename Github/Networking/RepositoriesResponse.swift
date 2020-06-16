@@ -12,6 +12,6 @@ class RepositoriesResponse: Decodable{
     var data: Repository?
     
     enum CodingKeys: String,CodingKey {
-         case data = "data"
+        case data = "data"
     }
 }

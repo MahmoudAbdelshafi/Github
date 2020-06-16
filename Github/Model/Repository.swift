@@ -13,13 +13,17 @@ struct Repository:Decodable {
     let id: Int?
     let name: String?
     let fullName: String?
+    let description: String?
+    let language: String?
     let owner: Owner?
     
     enum CodingKeys : String, CodingKey {
         case id
         case name
         case fullName = "full_name"
+        case description
         case owner
+        case language
     }
 }
 

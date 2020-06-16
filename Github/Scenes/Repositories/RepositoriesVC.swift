@@ -8,13 +8,13 @@
 
 import UIKit
 import Alamofire
+
 class RepositoriesVC: UIViewController {
     
-    var repo:[Repository]? {
-        didSet{
-            print(repo![0].name)
-        }
-    }
+    //MARK:- Properties
+    
+    var presenter: RepositoriesVCPresenter?
+    
     //MARK:- IBOutlets
     
     @IBOutlet weak var tableView:UITableView!
@@ -22,25 +22,12 @@ class RepositoriesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testNetWorkLayer()
+        presenter = RepositoriesVCPresenter(view: self)
+        presenter?.viewDidLoad()
         setupTableView()
     }
     
-    func testNetWorkLayer(){
-        let api: RepositoriesAPIProtocol = RepositoriesAPI()
-        api.getRepositories { (result) in
-            switch result {
-            case .success(let response):
-                var users = response
-                for user in users!{
-                    //print("\(user)")
-                }
-            case .failure(let error):
-                print(error)
-                
-            }
-        }
-    }
+
     
 }
 

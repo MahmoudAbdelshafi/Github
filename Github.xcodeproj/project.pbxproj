@@ -20,6 +20,8 @@
 		39278F1D24986C5F00965403 /* RepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39278F1C24986C5F00965403 /* RepositoriesResponse.swift */; };
 		39278F1F2498F6E600965403 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39278F1E2498F6E600965403 /* Owner.swift */; };
 		39278F252499302A00965403 /* RepositoriesVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39278F242499302A00965403 /* RepositoriesVCPresenter.swift */; };
+		39278F28249955DF00965403 /* RepositoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39278F27249955DF00965403 /* RepositoriesInteractor.swift */; };
+		39278F2A249956C800965403 /* RepositoriesVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39278F29249956C800965403 /* RepositoriesVC+PresenterDelegate.swift */; };
 		395D048D24967E5300C72631 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D048C24967E5300C72631 /* AppDelegate.swift */; };
 		395D049124967E5300C72631 /* RepositoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395D049024967E5300C72631 /* RepositoriesVC.swift */; };
 		395D049424967E5300C72631 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395D049224967E5300C72631 /* Main.storyboard */; };
@@ -52,6 +54,8 @@
 		39278F1C24986C5F00965403 /* RepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesResponse.swift; sourceTree = "<group>"; };
 		39278F1E2498F6E600965403 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		39278F242499302A00965403 /* RepositoriesVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVCPresenter.swift; sourceTree = "<group>"; };
+		39278F27249955DF00965403 /* RepositoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesInteractor.swift; sourceTree = "<group>"; };
+		39278F29249956C800965403 /* RepositoriesVC+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		395D048924967E5300C72631 /* Github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Github.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		395D048C24967E5300C72631 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		395D049024967E5300C72631 /* RepositoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVC.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			children = (
 				395D049024967E5300C72631 /* RepositoriesVC.swift */,
 				39278EF924969ED200965403 /* RepositoriesVC+TableView.swift */,
+				39278F29249956C800965403 /* RepositoriesVC+PresenterDelegate.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -115,12 +120,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		39278F012496B38F00965403 /* Presenter */ = {
+		39278F012496B38F00965403 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 				39278F242499302A00965403 /* RepositoriesVCPresenter.swift */,
 			);
-			path = Presenter;
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		39278F022496B3CE00965403 /* Networking */ = {
@@ -141,6 +146,14 @@
 				39278F162498171700965403 /* BaseAPI.swift */,
 			);
 			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		39278F26249955B400965403 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				39278F27249955DF00965403 /* RepositoriesInteractor.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		395D048024967E5300C72631 = {
@@ -222,7 +235,8 @@
 		395D04B22496856D00C72631 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				39278F012496B38F00965403 /* Presenter */,
+				39278F26249955B400965403 /* Interactors */,
+				39278F012496B38F00965403 /* Presenters */,
 				39278EFB24969F9400965403 /* TableViewCells */,
 				39278EF824969EAE00965403 /* Repositories */,
 			);
@@ -418,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39278F2A249956C800965403 /* RepositoriesVC+PresenterDelegate.swift in Sources */,
 				39278F172498171700965403 /* BaseAPI.swift in Sources */,
 				39278F1B24986AD600965403 /* RepositoriesAPI.swift in Sources */,
 				39278EFE24969FC900965403 /* RepositoryCell.swift in Sources */,
@@ -429,6 +444,7 @@
 				39278F1F2498F6E600965403 /* Owner.swift in Sources */,
 				39278F1D24986C5F00965403 /* RepositoriesResponse.swift in Sources */,
 				395D048D24967E5300C72631 /* AppDelegate.swift in Sources */,
+				39278F28249955DF00965403 /* RepositoriesInteractor.swift in Sources */,
 				39278F192498346700965403 /* RepositoriesNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

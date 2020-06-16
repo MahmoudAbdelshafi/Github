@@ -12,13 +12,4 @@ protocol RepositoriesAPIProtocol{
     func getRepositories(completion: @escaping (Result<[Repository]?, NSError>) -> Void)
 }
 
-class RepositoriesAPI: BaseAPI<RepositoriesNetworking>, RepositoriesAPIProtocol{
-    
-    //MARK:- Requests
-    
-    func getRepositories(completion: @escaping (Result<[Repository]?, NSError>) -> Void){
-        self.fetchData(target: .getRepos, responseClass: [Repository].self) { (result) in
-            completion(result)
-        }
-    }
-}
+

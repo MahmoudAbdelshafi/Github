@@ -8,17 +8,34 @@
 
 import UIKit
 
-class RepositoryCell: UITableViewCell {
-
+class RepositoryCell: UITableViewCell,RepositoryCellView {
+    
+    //MARK:- IBOutlet
+    
+    @IBOutlet private weak var repoNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var languageLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    }
+   
+    func displayRepoName(name: String) {
+        repoNameLabel.text = name
+    }
+    
+    func displayRepoDescription(description: String) {
+        descriptionLabel.text = description
+    }
+    
+    func displayRepoLanguage(language: String) {
+        languageLabel.text = language
     }
     
 }
