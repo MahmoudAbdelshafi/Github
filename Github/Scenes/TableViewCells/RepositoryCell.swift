@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserCell: UITableViewCell {
+class RepositoryCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
