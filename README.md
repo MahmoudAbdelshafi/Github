@@ -8,4 +8,4 @@
 
 - [x] List all public repositories for a specific user.
 - [x] Built in MVP architecture.
-- [x] Build clean and readable Network Layer.
+- [x] Clean and readable Network Layer.
