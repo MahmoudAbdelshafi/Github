@@ -7,5 +7,5 @@
 ## About the App 
 
 - [x] List all public repositories for a specific user.
-- [x] BuilditinMVParchitecture.
+- [x] Buildit in MVP architecture.
 - [x] Build clean and readable Network Layer.
